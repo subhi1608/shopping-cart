@@ -11,12 +11,8 @@ const CartWrapper = ({ cartData }) => {
 						{cartData?.map((item) => {
 							const updatedProps = { ...item.productData, qty: item.qty };
 							return (
-								<div style={{ margin: "5px" }}>
-									<ProductItem
-										productdata={updatedProps}
-										isCartPage={true}
-										key={item.productData.id}
-									/>
+								<div style={{ margin: "5px" }} key={item.productData.id}>
+									<ProductItem productdata={updatedProps} isCartPage={true} />
 								</div>
 							);
 						})}

@@ -5,7 +5,7 @@ const CartTotal = ({ cartData }) => {
 	useEffect(() => {
 		if (cartData && cartData.length) {
 			let finalPrice = 0;
-			cartData.map((item) => {
+			cartData.forEach((item) => {
 				const { productData, qty } = item;
 				let itemTotal = productData.price * qty;
 				finalPrice += itemTotal;
